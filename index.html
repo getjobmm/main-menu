@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Job Myanmar - Find Your Dream Job</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <h1>Get Job Myanmar</h1>
+            </div>
+            <div class="nav-links">
+                <a href="/" class="active" data-nav="home">Home</a>
+                <div class="dropdown" data-dropdown="jobs">
+                    <a href="#jobs" data-toggle="dropdown">Jobs <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="/jobs/browse" class="dropdown-item" data-action="browse-jobs"><i class="fas fa-search"></i> Browse All Jobs</a>
+                        <a href="/jobs/featured" class="dropdown-item" data-action="featured-jobs"><i class="fas fa-star"></i> Featured Jobs</a>
+                        <a href="/jobs/recent" class="dropdown-item" data-action="recent-jobs"><i class="fas fa-clock"></i> Recent Jobs</a>
+                        <div class="dropdown-divider"></div>
+                        <a href="/jobs/by-company" class="dropdown-item" data-action="company-jobs"><i class="fas fa-building"></i> Jobs by Company</a>
+                        <a href="/jobs/by-location" class="dropdown-item" data-action="location-jobs"><i class="fas fa-map-marker-alt"></i> Jobs by Location</a>
+                        <a href="/jobs/by-category" class="dropdown-item" data-action="category-jobs"><i class="fas fa-tags"></i> Jobs by Category</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="#companies">Companies <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="#" class="dropdown-item"><i class="fas fa-building"></i> Browse Companies</a>
+                        <a href="#" class="dropdown-item"><i class="fas fa-star"></i> Top Companies</a>
+                        <a href="#" class="dropdown-item"><i class="fas fa-industry"></i> By Industry</a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item"><i class="fas fa-plus-circle"></i> Add Your Company</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="#resources">Resources <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="#" class="dropdown-item"><i class="fas fa-book"></i> Career Guide</a>
+                        <a href="#" class="dropdown-item"><i class="fas fa-file-alt"></i> Resume Tips</a>
+                        <a href="#" class="dropdown-item"><i class="fas fa-graduation-cap"></i> Interview Prep</a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item"><i class="fas fa-chart-line"></i> Salary Guide</a>
+                        <a href="#" class="dropdown-item"><i class="fas fa-lightbulb"></i> Career Advice</a>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-controls">
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="auth-buttons">
+                    <button class="btn-login"><i class="fas fa-sign-in-alt"></i> Login</button>
+                    <button class="btn-register"><i class="fas fa-user-plus"></i> Register</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background">
+            <div class="animated-circles">
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+            </div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-text-container">
+                <h1 class="hero-title">
+                    <span class="gradient-text">Find Your Dream Job</span>
+                    <span class="location-text">in Myanmar</span>
+                </h1>
+                <p class="hero-subtitle">Discover <span class="highlight-number">10,000+</span> job opportunities with Myanmar's leading companies</p>
+            </div>
+            
+            <div class="search-container">
+                <div class="search-box" data-component="job-search">
+                    <div class="search-input-group">
+                        <div class="input-wrapper">
+                            <i class="fas fa-briefcase"></i>
+                            <input type="text" placeholder="Job title or keywords" data-search="query" id="jobSearchQuery">
+                        </div>
+                        <div class="input-divider"></div>
+                        <div class="input-wrapper">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <input type="text" placeholder="City or township" data-search="location" id="jobSearchLocation">
+                        </div>
+                        <button class="search-btn pulse-effect" data-action="search">
+                            <i class="fas fa-search"></i>
+                            <span>Find Jobs</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="quick-filters">
+                    <span class="filter-label">Popular:</span>
+                    <div class="filter-tags">
+                        <a href="#" class="filter-tag">Remote</a>
+                        <a href="#" class="filter-tag">IT & Software</a>
+                        <a href="#" class="filter-tag">Marketing</a>
+                        <a href="#" class="filter-tag">Full-time</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <i class="fas fa-users"></i>
+                    <div class="stat-text">
+                        <span class="stat-number">50K+</span>
+                        <span class="stat-label">Active Users</span>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-building"></i>
+                    <div class="stat-text">
+                        <span class="stat-number">1000+</span>
+                        <span class="stat-label">Companies</span>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-handshake"></i>
+                    <div class="stat-text">
+                        <span class="stat-number">30K+</span>
+                        <span class="stat-label">Successful Hires</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Jobs Section -->
+    <section class="featured-jobs">
+        <h2>Featured Jobs</h2>
+        <div class="job-cards">
+            <div class="job-card" data-job-id="1" data-company-id="1">
+                <h3>Senior Software Developer</h3>
+                <p class="company" data-company="Tech Solutions Myanmar">Tech Solutions Myanmar</p>
+                <p><i class="fas fa-map-marker-alt"></i> <span data-location="Yangon">Yangon</span></p>
+                <p><i class="fas fa-money-bill-wave"></i> <span data-salary="2000000-3000000">2,000,000 - 3,000,000 MMK</span></p>
+                <p><i class="fas fa-clock"></i> <span data-type="full-time">Full-time</span></p>
+                <p><i class="fas fa-calendar-alt"></i> <span data-posted="2024-04-08">2 days ago</span></p>
+                <button class="apply-btn" data-action="apply" data-job-id="1">Apply Now</button>
+            </div>
+
+            <div class="job-card">
+                <h3>Marketing Manager</h3>
+                <p class="company">Global Brands Co.</p>
+                <p><i class="fas fa-map-marker-alt"></i> Mandalay</p>
+                <p><i class="fas fa-money-bill-wave"></i> 1,500,000 - 2,000,000 MMK</p>
+                <p><i class="fas fa-clock"></i> Full-time</p>
+                <p><i class="fas fa-calendar-alt"></i> 1 day ago</p>
+                <button class="apply-btn">Apply Now</button>
+            </div>
+
+            <div class="job-card">
+                <h3>Customer Service Representative</h3>
+                <p class="company">Myanmar Services</p>
+                <p><i class="fas fa-map-marker-alt"></i> Yangon</p>
+                <p><i class="fas fa-money-bill-wave"></i> 800,000 - 1,200,000 MMK</p>
+                <p><i class="fas fa-clock"></i> Part-time</p>
+                <p><i class="fas fa-calendar-alt"></i> 3 days ago</p>
+                <button class="apply-btn">Apply Now</button>
+            </div>
+
+            <div class="job-card">
+                <h3>UI/UX Designer</h3>
+                <p class="company">Digital Innovations</p>
+                <p><i class="fas fa-map-marker-alt"></i> Yangon</p>
+                <p><i class="fas fa-money-bill-wave"></i> 1,200,000 - 1,800,000 MMK</p>
+                <p><i class="fas fa-clock"></i> Full-time</p>
+                <p><i class="fas fa-calendar-alt"></i> 2 days ago</p>
+                <button class="apply-btn">Apply Now</button>
+            </div>
+
+            <div class="job-card">
+                <h3>Sales Executive</h3>
+                <p class="company">Myanmar Trading Co.</p>
+                <p><i class="fas fa-map-marker-alt"></i> Mandalay</p>
+                <p><i class="fas fa-money-bill-wave"></i> 900,000 - 1,500,000 MMK</p>
+                <p><i class="fas fa-clock"></i> Full-time</p>
+                <p><i class="fas fa-calendar-alt"></i> 4 days ago</p>
+                <button class="apply-btn">Apply Now</button>
+            </div>
+
+            <div class="job-card">
+                <h3>Content Writer</h3>
+                <p class="company">Media Group Myanmar</p>
+                <p><i class="fas fa-map-marker-alt"></i> Yangon</p>
+                <p><i class="fas fa-money-bill-wave"></i> 700,000 - 1,000,000 MMK</p>
+                <p><i class="fas fa-clock"></i> Part-time</p>
+                <p><i class="fas fa-calendar-alt"></i> 2 days ago</p>
+                <button class="apply-btn">Apply Now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Job Categories Section -->
+    <section class="job-categories">
+        <h2>Popular Job Categories</h2>
+        <div class="category-cards">
+            <div class="category-card">
+                <i class="fas fa-code"></i>
+                <h3>Technology</h3>
+                <p>150+ Jobs</p>
+            </div>
+            <div class="category-card">
+                <i class="fas fa-chart-line"></i>
+                <h3>Marketing</h3>
+                <p>120+ Jobs</p>
+            </div>
+            <div class="category-card">
+                <i class="fas fa-briefcase"></i>
+                <h3>Business</h3>
+                <p>200+ Jobs</p>
+            </div>
+            <div class="category-card">
+                <i class="fas fa-paint-brush"></i>
+                <h3>Design</h3>
+                <p>80+ Jobs</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works">
+        <h2>How It Works</h2>
+        <div class="steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>Create Your Profile</h3>
+                <p>Sign up and build your professional profile with your skills and experience.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>Search Jobs</h3>
+                <p>Browse through thousands of job listings tailored to your preferences.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>Apply & Connect</h3>
+                <p>Apply to jobs with one click and connect with potential employers.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Get Job Myanmar</h3>
+                <p>Connecting talent with opportunities in Myanmar</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a href="#jobs">Find Jobs</a>
+                <a href="#companies">Companies</a>
+                <a href="#about">About Us</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: info@getjobmm.com</p>
+                <p>Phone: +95 123456789</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Get Job Myanmar. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Login to Get Job Myanmar</h2>
+            <div class="social-login">
+                <div id="g_id_onload"
+                     data-client_id="777254445671-ni24s0efq65q02t26ds23bqsgrfukhm1.apps.googleusercontent.com"
+                     data-context="signin"
+                     data-ux_mode="popup"
+                     data-auto_select="false"
+                     data-itp_support="true"
+                     data-callback="handleGoogleSignIn">
+                </div>
+                <div class="g_id_signin"
+                     data-type="standard"
+                     data-shape="rectangular"
+                     data-theme="outline"
+                     data-text="signin_with"
+                     data-size="large"
+                     data-logo_alignment="left"
+                     data-width="300">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div class="modal" id="registerModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Register</h2>
+            <form id="registerForm">
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" required>
+                </div>
+                <div class="form-group">
+                    <label for="regEmail">Email</label>
+                    <input type="email" id="regEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="regPassword">Password</label>
+                    <input type="password" id="regPassword" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" id="confirmPassword" required>
+                </div>
+                <button type="submit" class="btn-submit">Register</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+
+    <!-- Update the Apply Now buttons in job cards to include an icon -->
+    <script>
+        // Update the createJobCard function in main.js to include the icon
+        function updateApplyButtons() {
+            document.querySelectorAll('.apply-btn').forEach(btn => {
+                if (!btn.querySelector('i')) {
+                    const icon = document.createElement('i');
+                    icon.className = 'fas fa-paper-plane';
+                    btn.prepend(icon);
+                }
+            });
+        }
+        // Call this function after the job cards are created
+        document.addEventListener('DOMContentLoaded', updateApplyButtons);
+    </script>
+
+    <!-- Add Google Sign-In API -->
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+
+    <script>
+        // Initialize Google Sign-In
+        window.onload = function() {
+            checkAuth();
+        }
+
+        // Handle Google Sign-In
+        function handleGoogleSignIn(response) {
+            if (!response.credential) {
+                console.error('No credential received');
+                return;
+            }
+
+            console.log('Google Sign-In response received');
+            
+            // Send the token to your server
+            fetch('https://getjobmm.pythonanywhere.com/api/auth/google', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json',
+                    'X-Requested-With': 'XMLHttpRequest'
+                },
+                credentials: 'include',
+                body: JSON.stringify({ 
+                    credential: response.credential,
+                    client_id: '777254445671-ni24s0efq65q02t26ds23bqsgrfukhm1.apps.googleusercontent.com'
+                })
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok: ' + response.status);
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log('Server response:', data);
+                if (data.token) {
+                    localStorage.setItem('token', data.token);
+                    localStorage.setItem('user', JSON.stringify(data.user));
+                    window.location.href = 'jobs.html';
+                    modal.style.display = "none";
+                } else {
+                    throw new Error(data.error || 'Login failed');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Google sign-in failed. Please try again. Error: ' + error.message);
+            });
+        }
+
+        // Modal functionality
+        const modal = document.getElementById('loginModal');
+        const loginBtn = document.querySelector('.btn-login');
+        const closeModal = document.querySelector('.close-modal');
+
+        loginBtn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        closeModal.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        // Check if user is already logged in
+        function checkAuth() {
+            const token = localStorage.getItem('token');
+            if (token) {
+                // Update UI for logged-in user
+                document.querySelector('.auth-buttons').innerHTML = `
+                    <button onclick="logout()" class="btn-logout"><i class="fas fa-sign-out-alt"></i> Logout</button>
+                `;
+            }
+        }
+
+        function logout() {
+            // Clear local storage
+            localStorage.removeItem('token');
+            localStorage.removeItem('user');
+            // Reload the page
+            window.location.reload();
+        }
+    </script>
+
+    <style>
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+        }
+
+        .modal-content {
+            background-color: #fff;
+            margin: 15% auto;
+            padding: 20px;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 400px;
+            position: relative;
+            text-align: center;
+        }
+
+        .close-modal {
+            position: absolute;
+            right: 20px;
+            top: 10px;
+            font-size: 28px;
+            cursor: pointer;
+        }
+
+        .social-login {
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        #g_id_onload {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin: 10px 0;
+        }
+
+        .g_id_signin {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin: 10px 0;
+        }
+    </style>
+</body>
+</html> 

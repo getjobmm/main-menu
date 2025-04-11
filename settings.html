@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - Get Job MM</title>
+    <link rel="stylesheet" href="css/settings.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Left Sidebar -->
+    <div class="left-sidebar">
+        <div class="user-profile">
+            <img src="assets/default-avatar.png" alt="Profile Picture" class="profile-pic">
+            <div class="user-info">
+                <span class="user-name">John Doe</span>
+                <span class="user-role">Job Seeker</span>
+            </div>
+        </div>
+        <nav class="side-nav">
+            <a href="dashboard.html" class="nav-item">
+                <i class="fas fa-home"></i>
+                Dashboard
+            </a>
+            <a href="jobs.html" class="nav-item">
+                <i class="fas fa-briefcase"></i>
+                Jobs
+            </a>
+            <a href="applications.html" class="nav-item">
+                <i class="fas fa-file-alt"></i>
+                Applications
+            </a>
+            <a href="messages.html" class="nav-item">
+                <i class="fas fa-envelope"></i>
+                Messages
+            </a>
+            <a href="settings.html" class="nav-item active">
+                <i class="fas fa-cog"></i>
+                Settings
+            </a>
+        </nav>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="settings-header">
+            <h1>Settings</h1>
+            <button class="save-all-btn">
+                <i class="fas fa-save"></i>
+                Save All Changes
+            </button>
+        </div>
+
+        <div class="settings-container">
+            <nav class="settings-nav">
+                <a href="#profile" class="settings-nav-item active" data-section="profile">
+                    <i class="fas fa-user"></i>
+                    Profile
+                </a>
+                <a href="#account" class="settings-nav-item" data-section="account">
+                    <i class="fas fa-user-circle"></i>
+                    Account
+                </a>
+                <a href="#privacy" class="settings-nav-item" data-section="privacy">
+                    <i class="fas fa-shield-alt"></i>
+                    Privacy
+                </a>
+                <a href="#notifications" class="settings-nav-item" data-section="notifications">
+                    <i class="fas fa-bell"></i>
+                    Notifications
+                </a>
+                <a href="#preferences" class="settings-nav-item" data-section="preferences">
+                    <i class="fas fa-sliders-h"></i>
+                    Preferences
+                </a>
+                <a href="#security" class="settings-nav-item" data-section="security">
+                    <i class="fas fa-lock"></i>
+                    Security
+                </a>
+            </nav>
+
+            <div class="settings-content">
+                <!-- Profile Section -->
+                <section id="profile" class="settings-section active">
+                    <h2>Profile Settings</h2>
+                    
+                    <div class="setting-group">
+                        <label>Profile Picture</label>
+                        <div class="profile-upload">
+                            <img src="assets/default-avatar.png" alt="Current Profile" class="current-profile-pic">
+                            <button class="upload-btn">
+                                <i class="fas fa-upload"></i>
+                                Upload New Picture
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="setting-group">
+                        <label for="full-name">Full Name</label>
+                        <input type="text" id="full-name" class="form-control" value="John Doe">
+                    </div>
+
+                    <div class="setting-group">
+                        <label for="job-title">Job Title</label>
+                        <input type="text" id="job-title" class="form-control" value="Software Engineer">
+                    </div>
+
+                    <div class="setting-group">
+                        <label for="bio">Professional Bio</label>
+                        <textarea id="bio" class="form-control" rows="4">Experienced software engineer with a passion for building scalable applications.</textarea>
+                    </div>
+
+                    <div class="setting-group">
+                        <label>Salary Expectations</label>
+                        <div class="salary-range">
+                            <input type="number" class="form-control" placeholder="Min">
+                            <input type="number" class="form-control" placeholder="Max">
+                            <select class="form-control">
+                                <option value="monthly">Monthly</option>
+                                <option value="yearly">Yearly</option>
+                            </select>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Privacy Section -->
+                <section id="privacy" class="settings-section">
+                    <h2>Privacy Settings</h2>
+                    
+                    <div class="setting-group">
+                        <label>Profile Visibility</label>
+                        <select class="form-control">
+                            <option value="public">Public - Visible to everyone</option>
+                            <option value="private">Private - Only visible to approved connections</option>
+                            <option value="hidden">Hidden - Only visible to you</option>
+                        </select>
+                    </div>
+
+                    <div class="setting-group">
+                        <label>Information Sharing</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" checked>
+                                Show email address
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" checked>
+                                Show phone number
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" checked>
+                                Show current salary
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox">
+                                Show education
+                            </label>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Notifications Section -->
+                <section id="notifications" class="settings-section">
+                    <h2>Notification Preferences</h2>
+                    
+                    <div class="setting-group">
+                        <label>Email Notifications</label>
+                        <div class="toggle-group">
+                            <div class="toggle-item">
+                                <span>New job matches</span>
+                                <label class="toggle-switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                            <div class="toggle-item">
+                                <span>Application updates</span>
+                                <label class="toggle-switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                            <div class="toggle-item">
+                                <span>Messages from employers</span>
+                                <label class="toggle-switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Security Section -->
+                <section id="security" class="settings-section">
+                    <h2>Security Settings</h2>
+                    
+                    <div class="setting-group">
+                        <label>Password</label>
+                        <p>Last changed 3 months ago</p>
+                        <button class="btn-change-password">Change Password</button>
+                    </div>
+
+                    <div class="setting-group">
+                        <label>Active Sessions</label>
+                        <div class="sessions-list">
+                            <div class="session-item">
+                                <div class="session-info">
+                                    <i class="fas fa-desktop"></i>
+                                    <div>
+                                        <strong>Windows 10 - Chrome</strong>
+                                        <p>Current session</p>
+                                    </div>
+                                </div>
+                                <button class="btn-terminate" disabled>Current</button>
+                            </div>
+                            <div class="session-item">
+                                <div class="session-info">
+                                    <i class="fas fa-mobile-alt"></i>
+                                    <div>
+                                        <strong>iPhone - Safari</strong>
+                                        <p>Last active: 2 hours ago</p>
+                                    </div>
+                                </div>
+                                <button class="btn-terminate">Terminate</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Tab switching functionality
+        document.querySelectorAll('.settings-nav-item').forEach(item => {
+            item.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetSection = item.getAttribute('data-section');
+                
+                // Update nav items
+                document.querySelectorAll('.settings-nav-item').forEach(navItem => {
+                    navItem.classList.remove('active');
+                });
+                item.classList.add('active');
+                
+                // Update sections
+                document.querySelectorAll('.settings-section').forEach(section => {
+                    section.classList.remove('active');
+                });
+                document.getElementById(targetSection).classList.add('active');
+            });
+        });
+
+        // Save button functionality
+        document.querySelector('.save-all-btn').addEventListener('click', () => {
+            // Add save functionality here
+            alert('Changes saved successfully!');
+        });
+    </script>
+</body>
+</html> 

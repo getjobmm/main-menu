@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile - Get Job Myanmar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/jobs.css">
+    <link rel="stylesheet" href="css/profile.css">
+</head>
+<body>
+    <!-- Left Sidebar (reuse from jobs.html) -->
+    <div class="left-sidebar">
+        <div class="user-profile">
+            <img src="https://via.placeholder.com/50" alt="Profile Picture" class="profile-pic">
+            <span class="user-name">John Doe</span>
+        </div>
+        
+        <nav class="side-nav">
+            <a href="#" class="nav-item active" id="profile-link">
+                <i class="fas fa-user"></i> My Profile
+                <span class="menu-tooltip">View and edit your profile</span>
+            </a>
+            <a href="#" class="nav-item">
+                <i class="fas fa-newspaper"></i> Job Feed
+                <span class="menu-tooltip">Discover latest job opportunities</span>
+            </a>
+            <a href="#" class="nav-item">
+                <i class="fas fa-briefcase"></i> My Applications
+                <span class="badge">3</span>
+                <span class="menu-tooltip">Track your job applications</span>
+            </a>
+            <a href="#" class="nav-item">
+                <i class="fas fa-bookmark"></i> Saved Jobs
+                <span class="badge">5</span>
+                <span class="menu-tooltip">View your saved jobs</span>
+            </a>
+            <a href="#" class="nav-item">
+                <i class="fas fa-bell"></i> Job Alerts
+                <span class="badge alert">2</span>
+                <span class="menu-tooltip">Manage your job alerts</span>
+            </a>
+            <a href="#" class="nav-item">
+                <i class="fas fa-file-alt"></i> My Resume
+                <span class="menu-tooltip">Update your resume</span>
+            </a>
+            <a href="#" class="nav-item">
+                <i class="fas fa-chart-line"></i> Analytics
+                <span class="menu-tooltip">View your application statistics</span>
+            </a>
+            <a href="#" class="nav-item">
+                <i class="fas fa-cog"></i> Settings
+                <span class="menu-tooltip">Manage your preferences</span>
+            </a>
+        </nav>
+
+        <div class="categories-section">
+            <h3>Job Categories</h3>
+            <div class="category-list">
+                <a href="#" class="category-item">Web Development</a>
+                <a href="#" class="category-item">Mobile Development</a>
+                <a href="#" class="category-item">UI/UX Design</a>
+                <a href="#" class="category-item">Data Science</a>
+                <a href="#" class="category-item">Digital Marketing</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="profile-header">
+            <h1><i class="fas fa-user-circle"></i> My Profile</h1>
+            <div class="profile-actions">
+                <button class="action-btn preview-btn"><i class="fas fa-eye"></i> Preview Profile</button>
+                <button class="action-btn save-btn"><i class="fas fa-save"></i> Save Changes</button>
+            </div>
+        </div>
+
+        <div class="profile-form-container">
+            <div class="progress-bar">
+                <div class="progress-step active" data-step="1">
+                    <i class="fas fa-user"></i>
+                    <span>Personal Details</span>
+                </div>
+                <div class="progress-step" data-step="2">
+                    <i class="fas fa-briefcase"></i>
+                    <span>Professional Info</span>
+                </div>
+                <div class="progress-step" data-step="3">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>Education</span>
+                </div>
+                <div class="progress-step" data-step="4">
+                    <i class="fas fa-cog"></i>
+                    <span>Preferences</span>
+                </div>
+            </div>
+
+            <form id="profileForm" class="profile-form">
+                <!-- Step 1: Personal Details -->
+                <div class="form-step active" data-step="1">
+                    <div class="profile-photo-section">
+                        <div class="profile-photo">
+                            <img src="https://via.placeholder.com/150" alt="Profile Photo" id="profilePhoto">
+                            <div class="photo-overlay">
+                                <i class="fas fa-camera"></i>
+                                <span>Change Photo</span>
+                            </div>
+                        </div>
+                        <input type="file" id="photoInput" accept="image/*" hidden>
+                    </div>
+
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="fullName">Full Name *</label>
+                            <input type="text" id="fullName" required placeholder="Enter your full name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" required placeholder="Enter your email">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" required placeholder="Enter your phone number">
+                        </div>
+                        <div class="form-group">
+                            <label for="dob">Date of Birth *</label>
+                            <input type="date" id="dob" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="gender">Gender</label>
+                            <select id="gender">
+                                <option value="">Select gender</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="nationality">Nationality *</label>
+                            <select id="nationality" required>
+                                <option value="">Select nationality</option>
+                                <option value="myanmar">Myanmar</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="address">Current Address *</label>
+                        <textarea id="address" required placeholder="Enter your current address"></textarea>
+                    </div>
+                </div>
+
+                <!-- Step 2: Professional Info -->
+                <div class="form-step" data-step="2">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="currentPosition">Current Position</label>
+                            <input type="text" id="currentPosition" placeholder="e.g., Senior Developer">
+                        </div>
+                        <div class="form-group">
+                            <label for="company">Current Company</label>
+                            <input type="text" id="company" placeholder="e.g., Tech Solutions Inc.">
+                        </div>
+                        <div class="form-group">
+                            <label for="experience">Years of Experience *</label>
+                            <input type="number" id="experience" required min="0" step="0.5">
+                        </div>
+                        <div class="form-group">
+                            <label for="expectedSalary">Expected Salary (MMK) *</label>
+                            <input type="number" id="expectedSalary" required placeholder="e.g., 1500000">
+                        </div>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label>Skills *</label>
+                        <div class="skills-input-container">
+                            <div class="skills-tags"></div>
+                            <input type="text" id="skillInput" placeholder="Type a skill and press Enter">
+                        </div>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="bio">Professional Summary</label>
+                        <textarea id="bio" rows="4" placeholder="Write a short professional summary"></textarea>
+                    </div>
+                </div>
+
+                <!-- Step 3: Education -->
+                <div class="form-step" data-step="3">
+                    <div class="education-entries">
+                        <div class="education-entry">
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label>Degree Level *</label>
+                                    <select required>
+                                        <option value="">Select degree level</option>
+                                        <option value="high_school">High School</option>
+                                        <option value="bachelor">Bachelor's Degree</option>
+                                        <option value="master">Master's Degree</option>
+                                        <option value="phd">Ph.D.</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Field of Study *</label>
+                                    <input type="text" required placeholder="e.g., Computer Science">
+                                </div>
+                                <div class="form-group">
+                                    <label>Institution *</label>
+                                    <input type="text" required placeholder="Enter institution name">
+                                </div>
+                                <div class="form-group">
+                                    <label>Graduation Year *</label>
+                                    <input type="number" required min="1900" max="2099">
+                                </div>
+                            </div>
+                            <button type="button" class="remove-entry"><i class="fas fa-trash"></i></button>
+                        </div>
+                    </div>
+                    <button type="button" class="add-entry-btn"><i class="fas fa-plus"></i> Add Another Education</button>
+                </div>
+
+                <!-- Step 4: Preferences -->
+                <div class="form-step" data-step="4">
+                    <div class="form-group">
+                        <label>Job Types</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="jobType" value="full_time">
+                                <span>Full-time</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="jobType" value="part_time">
+                                <span>Part-time</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="jobType" value="contract">
+                                <span>Contract</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="jobType" value="freelance">
+                                <span>Freelance</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Preferred Work Location</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="workLocation" value="onsite">
+                                <span>On-site</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="workLocation" value="remote">
+                                <span>Remote</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="workLocation" value="hybrid">
+                                <span>Hybrid</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Additional Preferences</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="preferences" value="relocation">
+                                <span>Willing to relocate</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="preferences" value="travel">
+                                <span>Willing to travel</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="preferences" value="overtime">
+                                <span>Available for overtime</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="notice-period">Notice Period</label>
+                        <select id="notice-period">
+                            <option value="">Select notice period</option>
+                            <option value="immediate">Immediate</option>
+                            <option value="1_week">1 week</option>
+                            <option value="2_weeks">2 weeks</option>
+                            <option value="1_month">1 month</option>
+                            <option value="2_months">2 months</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-navigation">
+                    <button type="button" class="prev-btn" disabled><i class="fas fa-arrow-left"></i> Previous</button>
+                    <div class="step-indicator">Step <span class="current-step">1</span> of 4</div>
+                    <button type="button" class="next-btn">Next <i class="fas fa-arrow-right"></i></button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/profile.js"></script>
+</body>
+</html> 
